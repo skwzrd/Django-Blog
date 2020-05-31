@@ -1,0 +1,3 @@
+*.sqlite3
+uploads/*
+art_app/migrations/0*.py
