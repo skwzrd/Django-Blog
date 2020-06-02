@@ -4,7 +4,7 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils import timezone
 
-ALLOWED_EXTS = ['png', 'jpg', 'jpeg', 'webm', 'gif']
+ALLOWED_EXTS = ['png', 'jpg', 'jpeg', 'gif']
 
 class Tag(models.TextChoices):
     SHARING = 'SH', 'Sharing'

@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hidden Places</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'art_app/style.css' %}">
+  </head>
+  <body>
+    {% include 'art_app/_navbar.html' %}
+    {% block body %}{% endblock %}
+  </body>
+</html>

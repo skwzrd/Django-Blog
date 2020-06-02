@@ -1,0 +1,27 @@
+{% extends 'art_app/_layout.html' %}
+{% block body %}
+{% if post_list %}
+    {% for post in post_list %}
+        {% if post.post_media %}
+            <img src="{{ post.post_media.url }}" alt="{{ post.post_media.url }}">
+        {% endif %}
+        <div class="post">
+            {{ post.post_text|safe }}
+        </div>
+    {% endfor %}
+
+    {% if pages.prev is not None %}
+        <a href="{% url 'art_app:index-page' pages.prev %}">prev page</a>
+    {% else %}
+        ...
+    {% endif %}
+    {% if pages.next is not None %}
+        <a href="{% url 'art_app:index-page' pages.next %}">next page</a>
+    {% else %}
+        ...
+    {% endif %}
+
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}
+{% endblock body %}
