@@ -1,0 +1,10 @@
+{% if pages.prev is not None %}
+    <a href="{% url 'art_app:index-page' pages.prev %}">prev page</a>
+{% else %}
+    ...
+{% endif %}
+{% if pages.next is not None %}
+    <a href="{% url 'art_app:index-page' pages.next %}">next page</a>
+{% else %}
+    ...
+{% endif %}
